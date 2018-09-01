@@ -9,7 +9,7 @@ export default class Featuretta extends PureComponent {
   render () {
     return (
       <div className="featuretta">
-       <h1> Featuretta Component </h1>
+       <h1> {this.props.title} </h1>
       </div>
     )
   }
