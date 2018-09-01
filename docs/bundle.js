@@ -58,13 +58,11 @@
 	
 	var _component2 = _interopRequireDefault(_component);
 	
+	__webpack_require__(187);
+	
 	__webpack_require__(191);
 	
-	__webpack_require__(195);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -74,19 +72,6 @@
 	// In your code this would be:
 	// import Toggle from 'react-toggle'
 	
-	var Heart = function Heart() {
-	  return _react2.default.createElement(
-	    'div',
-	    { style: {
-	        color: '#fff',
-	        fontSize: '1.2em',
-	        position: 'absolute',
-	        top: '0.4em'
-	      } },
-	    '\u2764'
-	  );
-	};
-	
 	var App = function (_Component) {
 	  _inherits(App, _Component);
 	
@@ -95,45 +80,13 @@
 	
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	
-	    _this.handleMilkChange = _this.handleMilkChange.bind(_this);
-	    _this.handleSoupChange = _this.handleChange.bind(_this, 'soupIsReady');
-	    _this.handleTofuChange = _this.handleChange.bind(_this, 'tofuIsReady');
-	    _this.handleEggsChange = _this.handleChange.bind(_this, 'eggsAreReady');
-	    _this.handleBaconChange = _this.handleChange.bind(_this, 'baconIsReady');
-	    _this.handleToastChange = _this.handleChange.bind(_this, 'toastIsReady');
-	    _this.handleCheeseChange = _this.handleChange.bind(_this, 'cheeseIsReady');
-	    _this.handleBiscuitChange = _this.handleChange.bind(_this, 'biscuitIsReady');
-	    _this.handleBurritoChange = _this.handleChange.bind(_this, 'burritoIsReady');
-	    _this.handleAubergineChange = _this.handleChange.bind(_this, 'aubergineIsReady');
-	
 	    _this.state = {
-	      aubergineIsReady: true,
-	      cheeseIsReady: false,
-	      baconIsReady: false,
-	      biscuitIsReady: false,
-	      milkIsReady: false,
-	      eggsAreReady: false,
-	      soupIsReady: true,
-	      tofuIsReady: false,
-	      burritoIsReady: false,
-	      toastIsReady: false,
-	      formData: {}
+	      title: "updated title"
 	    };
 	    return _this;
 	  }
 	
 	  _createClass(App, [{
-	    key: 'handleChange',
-	    value: function handleChange(key, event) {
-	      this.setState(_defineProperty({}, key, event.target.checked));
-	    }
-	  }, {
-	    key: 'handleMilkChange',
-	    value: function handleMilkChange() {
-	      var form = this.refs.breakfastForm;
-	      this.setState({ formData: form.milkIsReady.checked ? { milkIsReady: form.milkIsReady.value } : {} });
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -142,7 +95,7 @@
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'react-toggle'
+	          'react-featuretta'
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -155,12 +108,12 @@
 	          _react2.default.createElement(
 	            'pre',
 	            null,
-	            'npm install react-toggle --save'
+	            'npm install react-featuretta --save'
 	          ),
 	          _react2.default.createElement(
 	            'pre',
 	            null,
-	            'import Toggle from \'react-toggle\''
+	            'import Featuretta from \'react-featuretta\''
 	          ),
 	          _react2.default.createElement(
 	            'p',
@@ -170,7 +123,7 @@
 	          _react2.default.createElement(
 	            'pre',
 	            null,
-	            'var Toggle = require(\'react-toggle\')'
+	            'var Featuretta = require(\'react-featuretta\')'
 	          ),
 	          _react2.default.createElement(
 	            'p',
@@ -178,7 +131,7 @@
 	            'Include the component\'s ',
 	            _react2.default.createElement(
 	              'a',
-	              { href: 'https://raw.githubusercontent.com/instructure-react/react-toggle/master/style.css' },
+	              { href: 'https://raw.githubusercontent.com/instructure-react/react-featuretta/master/style.css' },
 	              'CSS'
 	            ),
 	            '.'
@@ -187,314 +140,12 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'example' },
-	          _react2.default.createElement(
-	            'label',
-	            null,
-	            _react2.default.createElement(_component2.default, {
-	              defaultChecked: this.state.baconIsReady,
-	              onChange: this.handleBaconChange }),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'label-text' },
-	              'Wrapper label tag'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '<label>\n  <Toggle\n    defaultChecked={this.state.baconIsReady}\n    onChange={this.handleBaconChange} />\n  <span>Wrapper label tag</span>\n</label>'
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            'this.state.baconIsReady: ',
-	            JSON.stringify(this.state.baconIsReady)
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
 	          _react2.default.createElement(_component2.default, {
-	            id: 'cheese-status',
-	            defaultChecked: this.state.cheeseIsReady,
-	            onChange: this.handleCheeseChange }),
-	          _react2.default.createElement(
-	            'label',
-	            { htmlFor: 'cheese-status' },
-	            'Adjacent label tag'
-	          ),
+	            title: this.state.title }),
 	          _react2.default.createElement(
 	            'pre',
 	            null,
-	            '<Toggle\n  id=\'cheese-status\'\n  defaultChecked={this.state.cheeseIsReady}\n  onChange={this.handleCheeseChange} />\n<label htmlFor=\'cheese-status\'>Adjacent label tag</label>'
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            'this.state.cheeseIsReady: ',
-	            JSON.stringify(this.state.cheeseIsReady)
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
-	          _react2.default.createElement(_component2.default, {
-	            id: 'biscuit-status',
-	            defaultChecked: this.state.biscuitIsReady,
-	            'aria-labelledby': 'biscuit-label',
-	            onChange: this.handleBiscuitChange }),
-	          _react2.default.createElement(
-	            'span',
-	            { id: 'biscuit-label', className: 'label-text' },
-	            'Adjacent label, but not standard tag'
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '<Toggle\n  id=\'biscuit-status\'\n  defaultChecked={this.state.biscuitIsReady}\n  aria-labelledby=\'biscuit-label\'\n  onChange={this.handleBiscuitChange} />\n<span id=\'biscuit-label\'>Adjacent label, but not standard tag</span>'
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            'this.state.biscuitIsReady: ',
-	            JSON.stringify(this.state.biscuitIsReady)
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
-	          _react2.default.createElement(_component2.default, {
-	            defaultChecked: this.state.eggsAreReady,
-	            'aria-label': 'No label',
-	            onChange: this.handleEggsChange }),
-	          _react2.default.createElement(
-	            'span',
-	            { className: 'label-text' },
-	            'No label tag'
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '<Toggle\n  defaultChecked={this.state.eggsAreReady}\n  aria-label=\'No label tag\'\n  onChange={this.handleEggsChange} />\n<span>No label tag</span>'
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            'this.state.eggsAreReady: ',
-	            JSON.stringify(this.state.eggsAreReady)
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
-	          _react2.default.createElement(
-	            'div',
-	            null,
-	            'Handle change'
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            'handleChange(event) {\n  // do something with event.target.checked\n}'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
-	          _react2.default.createElement(
-	            'label',
-	            null,
-	            _react2.default.createElement(_component2.default, {
-	              defaultChecked: !!this.state.milkIsReady,
-	              name: 'milkIsReady',
-	              value: 'yes',
-	              onChange: this.handleMilkChange }),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'label-text' },
-	              'Using form data'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '<Toggle\n  defaultChecked={this.state.milkIsReady}\n  name=\'milkIsReady\'\n  value=\'yes\' />'
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            'formData: ',
-	            JSON.stringify(this.state.formData)
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
-	          _react2.default.createElement(
-	            'label',
-	            null,
-	            _react2.default.createElement('input', {
-	              type: 'checkbox',
-	              checked: this.state.burritoIsReady,
-	              name: 'burritoIsReady2',
-	              onChange: this.handleBurritoChange }),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'label-text' },
-	              ' Controlled Component'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '<Toggle\n  checked={this.state.burritoIsReady}\n  name=\'burritoIsReady\'\n  value=\'yes\'\n  onChange={this.handleBurritoChange}/>'
-	          ),
-	          _react2.default.createElement(_component2.default, {
-	            checked: this.state.burritoIsReady,
-	            name: 'burritoIsReady',
-	            value: 'yes',
-	            onChange: this.handleBurritoChange })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
-	          _react2.default.createElement(
-	            'label',
-	            null,
-	            _react2.default.createElement('input', {
-	              type: 'checkbox',
-	              checked: this.state.toastIsReady,
-	              name: 'toastIsReady2',
-	              onChange: this.handleToastChange }),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'label-text' },
-	              ' Controlled Component without onChange'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '<Toggle\n  checked={this.state.toastIsReady}\n  name=\'toastIsReady\'\n  value=\'yes\' />'
-	          ),
-	          _react2.default.createElement(_component2.default, {
-	            checked: this.state.toastIsReady,
-	            name: 'toastIsReady',
-	            value: 'yes' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
-	          _react2.default.createElement(
-	            'div',
-	            { style: { marginBottom: '8px' } },
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              _react2.default.createElement(_component2.default, {
-	                defaultChecked: false,
-	                disabled: true }),
-	              _react2.default.createElement(
-	                'span',
-	                { className: 'label-text' },
-	                'Diabled, Unchecked'
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            null,
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              _react2.default.createElement(_component2.default, {
-	                defaultChecked: true,
-	                disabled: true }),
-	              _react2.default.createElement(
-	                'span',
-	                { className: 'label-text' },
-	                'Disabled, Checked'
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '<label>\n  <Toggle\n    defaultChecked={false}\n    disabled={true} />\n  <span className=\'label-text\'>Diabled, Unchecked</span>\n</label>\n<label>\n  <Toggle\n    defaultChecked={true}\n    disabled={true} />\n  <span className=\'label-text\'>Disabled, Checked</span>\n</label>'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
-	          _react2.default.createElement(
-	            'label',
-	            null,
-	            _react2.default.createElement(_component2.default, {
-	              defaultChecked: this.state.aubergineIsReady,
-	              className: 'custom-classname',
-	              onChange: this.handleAubergineChange }),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'label-text' },
-	              'Custom className'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '<label>\n  <Toggle\n    defaultChecked={this.state.aubergineIsReady}\n    className=\'custom-classname\'\n    onChange={this.handleAubergineChange} />\n  <span>Custom className</span>\n</label>'
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '.custom-classname.react-toggle--checked .react-toggle-track {\n  background-color: #ab199f;\n}'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
-	          _react2.default.createElement(
-	            'label',
-	            null,
-	            _react2.default.createElement(_component2.default, {
-	              defaultChecked: this.state.soupIsReady,
-	              icons: {
-	                checked: _react2.default.createElement(Heart, null),
-	                unchecked: null
-	              },
-	              onChange: this.handleSoupChange }),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'label-text' },
-	              'Custom icons'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '<label>\n  <Toggle\n    defaultChecked={this.state.soupIsReady}\n    icons={{\n      checked: <Heart />,\n      unchecked: null,\n    }}\n    onChange={this.handleSoupChange} />\n  <span>Custom icons</span>\n</label>'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'example' },
-	          _react2.default.createElement(
-	            'label',
-	            null,
-	            _react2.default.createElement(_component2.default, {
-	              defaultChecked: this.state.tofuIsReady,
-	              icons: false,
-	              onChange: this.handleTofuChange }),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'label-text' },
-	              'No icons'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'pre',
-	            null,
-	            '<label>\n  <Toggle\n    defaultChecked={this.state.tofuIsReady}\n    icons={false}\n    onChange={this.handleTofuChange} />\n  <span>No icons</span>\n</label>'
+	            '<Featuretta title={this.state.title} />'
 	          )
 	        )
 	      );
@@ -22329,35 +21980,17 @@
 	  value: true
 	});
 	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(185);
-	
-	var _classnames2 = _interopRequireDefault(_classnames);
-	
-	var _propTypes = __webpack_require__(186);
+	var _propTypes = __webpack_require__(185);
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
-	var _check = __webpack_require__(188);
-	
-	var _check2 = _interopRequireDefault(_check);
-	
-	var _x = __webpack_require__(189);
-	
-	var _x2 = _interopRequireDefault(_x);
-	
-	var _util = __webpack_require__(190);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -22365,278 +21998,46 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Toggle = function (_PureComponent) {
-	  _inherits(Toggle, _PureComponent);
+	var Featuretta = function (_PureComponent) {
+	  _inherits(Featuretta, _PureComponent);
 	
-	  function Toggle(props) {
-	    _classCallCheck(this, Toggle);
+	  function Featuretta(props) {
+	    _classCallCheck(this, Featuretta);
 	
-	    var _this = _possibleConstructorReturn(this, (Toggle.__proto__ || Object.getPrototypeOf(Toggle)).call(this, props));
-	
-	    _this.handleClick = _this.handleClick.bind(_this);
-	    _this.handleTouchStart = _this.handleTouchStart.bind(_this);
-	    _this.handleTouchMove = _this.handleTouchMove.bind(_this);
-	    _this.handleTouchEnd = _this.handleTouchEnd.bind(_this);
-	    _this.handleFocus = _this.handleFocus.bind(_this);
-	    _this.handleBlur = _this.handleBlur.bind(_this);
-	    _this.previouslyChecked = !!(props.checked || props.defaultChecked);
-	    _this.state = {
-	      checked: !!(props.checked || props.defaultChecked),
-	      hasFocus: false
-	    };
-	    return _this;
+	    return _possibleConstructorReturn(this, (Featuretta.__proto__ || Object.getPrototypeOf(Featuretta)).call(this, props));
 	  }
 	
-	  _createClass(Toggle, [{
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      if ('checked' in nextProps) {
-	        this.setState({ checked: !!nextProps.checked });
-	      }
-	    }
-	  }, {
-	    key: 'handleClick',
-	    value: function handleClick(event) {
-	      var checkbox = this.input;
-	      if (event.target !== checkbox && !this.moved) {
-	        this.previouslyChecked = checkbox.checked;
-	        event.preventDefault();
-	        checkbox.focus();
-	        checkbox.click();
-	        return;
-	      }
-	
-	      var checked = this.props.hasOwnProperty('checked') ? this.props.checked : checkbox.checked;
-	
-	      this.setState({ checked: checked });
-	    }
-	  }, {
-	    key: 'handleTouchStart',
-	    value: function handleTouchStart(event) {
-	      this.startX = (0, _util.pointerCoord)(event).x;
-	      this.activated = true;
-	    }
-	  }, {
-	    key: 'handleTouchMove',
-	    value: function handleTouchMove(event) {
-	      if (!this.activated) return;
-	      this.moved = true;
-	
-	      if (this.startX) {
-	        var currentX = (0, _util.pointerCoord)(event).x;
-	        if (this.state.checked && currentX + 15 < this.startX) {
-	          this.setState({ checked: false });
-	          this.startX = currentX;
-	          this.activated = true;
-	        } else if (currentX - 15 > this.startX) {
-	          this.setState({ checked: true });
-	          this.startX = currentX;
-	          this.activated = currentX < this.startX + 5;
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'handleTouchEnd',
-	    value: function handleTouchEnd(event) {
-	      if (!this.moved) return;
-	      var checkbox = this.input;
-	      event.preventDefault();
-	
-	      if (this.startX) {
-	        var endX = (0, _util.pointerCoord)(event).x;
-	        if (this.previouslyChecked === true && this.startX + 4 > endX) {
-	          if (this.previouslyChecked !== this.state.checked) {
-	            this.setState({ checked: false });
-	            this.previouslyChecked = this.state.checked;
-	            checkbox.click();
-	          }
-	        } else if (this.startX - 4 < endX) {
-	          if (this.previouslyChecked !== this.state.checked) {
-	            this.setState({ checked: true });
-	            this.previouslyChecked = this.state.checked;
-	            checkbox.click();
-	          }
-	        }
-	
-	        this.activated = false;
-	        this.startX = null;
-	        this.moved = false;
-	      }
-	    }
-	  }, {
-	    key: 'handleFocus',
-	    value: function handleFocus(event) {
-	      var onFocus = this.props.onFocus;
-	
-	
-	      if (onFocus) {
-	        onFocus(event);
-	      }
-	
-	      this.setState({ hasFocus: true });
-	    }
-	  }, {
-	    key: 'handleBlur',
-	    value: function handleBlur(event) {
-	      var onBlur = this.props.onBlur;
-	
-	
-	      if (onBlur) {
-	        onBlur(event);
-	      }
-	
-	      this.setState({ hasFocus: false });
-	    }
-	  }, {
-	    key: 'getIcon',
-	    value: function getIcon(type) {
-	      var icons = this.props.icons;
-	
-	      if (!icons) {
-	        return null;
-	      }
-	      return icons[type] === undefined ? Toggle.defaultProps.icons[type] : icons[type];
-	    }
-	  }, {
+	  _createClass(Featuretta, [{
 	    key: 'render',
 	    value: function render() {
-	      var _this2 = this;
-	
-	      var _props = this.props,
-	          className = _props.className,
-	          _icons = _props.icons,
-	          inputProps = _objectWithoutProperties(_props, ['className', 'icons']);
-	
-	      var classes = (0, _classnames2.default)('react-toggle', {
-	        'react-toggle--checked': this.state.checked,
-	        'react-toggle--focus': this.state.hasFocus,
-	        'react-toggle--disabled': this.props.disabled
-	      }, className);
-	
 	      return _react2.default.createElement(
 	        'div',
-	        { className: classes,
-	          onClick: this.handleClick,
-	          onTouchStart: this.handleTouchStart,
-	          onTouchMove: this.handleTouchMove,
-	          onTouchEnd: this.handleTouchEnd },
+	        { className: 'featuretta' },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'react-toggle-track' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'react-toggle-track-check' },
-	            this.getIcon('checked')
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'react-toggle-track-x' },
-	            this.getIcon('unchecked')
-	          )
-	        ),
-	        _react2.default.createElement('div', { className: 'react-toggle-thumb' }),
-	        _react2.default.createElement('input', _extends({}, inputProps, {
-	          ref: function ref(_ref) {
-	            _this2.input = _ref;
-	          },
-	          onFocus: this.handleFocus,
-	          onBlur: this.handleBlur,
-	          className: 'react-toggle-screenreader-only',
-	          type: 'checkbox' }))
+	          'h1',
+	          null,
+	          ' Featuretta Component '
+	        )
 	      );
 	    }
 	  }]);
 	
-	  return Toggle;
+	  return Featuretta;
 	}(_react.PureComponent);
 	
-	exports.default = Toggle;
+	exports.default = Featuretta;
 	
 	
-	Toggle.displayName = 'Toggle';
-	
-	Toggle.defaultProps = {
-	  icons: {
-	    checked: _react2.default.createElement(_check2.default, null),
-	    unchecked: _react2.default.createElement(_x2.default, null)
-	  }
+	Featuretta.defaultProps = {
+	  title: "sample title"
 	};
 	
-	Toggle.propTypes = {
-	  checked: _propTypes2.default.bool,
-	  disabled: _propTypes2.default.bool,
-	  defaultChecked: _propTypes2.default.bool,
-	  onChange: _propTypes2.default.func,
-	  onFocus: _propTypes2.default.func,
-	  onBlur: _propTypes2.default.func,
-	  className: _propTypes2.default.string,
-	  name: _propTypes2.default.string,
-	  value: _propTypes2.default.string,
-	  id: _propTypes2.default.string,
-	  'aria-labelledby': _propTypes2.default.string,
-	  'aria-label': _propTypes2.default.string,
-	  icons: _propTypes2.default.oneOfType([_propTypes2.default.bool, _propTypes2.default.shape({
-	    checked: _propTypes2.default.node,
-	    unchecked: _propTypes2.default.node
-	  })])
+	Featuretta.propTypes = {
+	  title: _propTypes2.default.string
 	};
 
 /***/ }),
 /* 185 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2016 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	/* global define */
-	
-	(function () {
-		'use strict';
-	
-		var hasOwn = {}.hasOwnProperty;
-	
-		function classNames () {
-			var classes = [];
-	
-			for (var i = 0; i < arguments.length; i++) {
-				var arg = arguments[i];
-				if (!arg) continue;
-	
-				var argType = typeof arg;
-	
-				if (argType === 'string' || argType === 'number') {
-					classes.push(arg);
-				} else if (Array.isArray(arg)) {
-					classes.push(classNames.apply(null, arg));
-				} else if (argType === 'object') {
-					for (var key in arg) {
-						if (hasOwn.call(arg, key) && arg[key]) {
-							classes.push(key);
-						}
-					}
-				}
-			}
-	
-			return classes.join(' ');
-		}
-	
-		if (typeof module !== 'undefined' && module.exports) {
-			module.exports = classNames;
-		} else if (true) {
-			// register as 'classnames', consistent with npm package name
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
-				return classNames;
-			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else {
-			window.classNames = classNames;
-		}
-	}());
-
-
-/***/ }),
-/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -22665,13 +22066,13 @@
 	} else {
 	  // By explicitly using `prop-types` you are opting into new production behavior.
 	  // http://fb.me/prop-types-in-prod
-	  module.exports = __webpack_require__(187)();
+	  module.exports = __webpack_require__(186)();
 	}
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 187 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
@@ -22735,105 +22136,16 @@
 
 
 /***/ }),
-/* 188 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = function () {
-	  return _react2.default.createElement(
-	    'svg',
-	    { width: '14', height: '11', viewBox: '0 0 14 11' },
-	    _react2.default.createElement(
-	      'title',
-	      null,
-	      'switch-check'
-	    ),
-	    _react2.default.createElement('path', { d: 'M11.264 0L5.26 6.004 2.103 2.847 0 4.95l5.26 5.26 8.108-8.107L11.264 0', fill: '#fff', fillRule: 'evenodd' })
-	  );
-	};
-
-/***/ }),
-/* 189 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = function () {
-	  return _react2.default.createElement(
-	    'svg',
-	    { width: '10', height: '10', viewBox: '0 0 10 10' },
-	    _react2.default.createElement(
-	      'title',
-	      null,
-	      'switch-x'
-	    ),
-	    _react2.default.createElement('path', { d: 'M9.9 2.12L7.78 0 4.95 2.828 2.12 0 0 2.12l2.83 2.83L0 7.776 2.123 9.9 4.95 7.07 7.78 9.9 9.9 7.776 7.072 4.95 9.9 2.12', fill: '#fff', fillRule: 'evenodd' })
-	  );
-	};
-
-/***/ }),
-/* 190 */
-/***/ (function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.pointerCoord = pointerCoord;
-	// Copyright 2015-present Drifty Co.
-	// http://drifty.com/
-	// from: https://github.com/driftyco/ionic/blob/master/src/util/dom.ts
-	
-	function pointerCoord(event) {
-	  // get coordinates for either a mouse click
-	  // or a touch depending on the given event
-	  if (event) {
-	    var changedTouches = event.changedTouches;
-	    if (changedTouches && changedTouches.length > 0) {
-	      var touch = changedTouches[0];
-	      return { x: touch.clientX, y: touch.clientY };
-	    }
-	    var pageX = event.pageX;
-	    if (pageX !== undefined) {
-	      return { x: pageX, y: event.pageY };
-	    }
-	  }
-	  return { x: 0, y: 0 };
-	}
-
-/***/ }),
-/* 191 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(192);
+	var content = __webpack_require__(188);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(194)(content, {});
+	var update = __webpack_require__(190)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -22850,21 +22162,21 @@
 	}
 
 /***/ }),
-/* 192 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(193)();
+	exports = module.exports = __webpack_require__(189)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, ".react-toggle {\n  touch-action: pan-x;\n\n  display: inline-block;\n  position: relative;\n  cursor: pointer;\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n}\n\n.react-toggle-screenreader-only {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}\n\n.react-toggle--disabled {\n  cursor: not-allowed;\n  opacity: 0.5;\n  -webkit-transition: opacity 0.25s;\n  transition: opacity 0.25s;\n}\n\n.react-toggle-track {\n  width: 50px;\n  height: 24px;\n  padding: 0;\n  border-radius: 30px;\n  background-color: #4D4D4D;\n  -webkit-transition: all 0.2s ease;\n  -moz-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n}\n\n.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {\n  background-color: #000000;\n}\n\n.react-toggle--checked .react-toggle-track {\n  background-color: #19AB27;\n}\n\n.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {\n  background-color: #128D15;\n}\n\n.react-toggle-track-check {\n  position: absolute;\n  width: 14px;\n  height: 10px;\n  top: 0px;\n  bottom: 0px;\n  margin-top: auto;\n  margin-bottom: auto;\n  line-height: 0;\n  left: 8px;\n  opacity: 0;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n}\n\n.react-toggle--checked .react-toggle-track-check {\n  opacity: 1;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n}\n\n.react-toggle-track-x {\n  position: absolute;\n  width: 10px;\n  height: 10px;\n  top: 0px;\n  bottom: 0px;\n  margin-top: auto;\n  margin-bottom: auto;\n  line-height: 0;\n  right: 10px;\n  opacity: 1;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n}\n\n.react-toggle--checked .react-toggle-track-x {\n  opacity: 0;\n}\n\n.react-toggle-thumb {\n  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  width: 22px;\n  height: 22px;\n  border: 1px solid #4D4D4D;\n  border-radius: 50%;\n  background-color: #FAFAFA;\n\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n\n  -webkit-transition: all 0.25s ease;\n  -moz-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.react-toggle--checked .react-toggle-thumb {\n  left: 27px;\n  border-color: #19AB27;\n}\n\n.react-toggle--focus .react-toggle-thumb {\n  -webkit-box-shadow: 0px 0px 3px 2px #0099E0;\n  -moz-box-shadow: 0px 0px 3px 2px #0099E0;\n  box-shadow: 0px 0px 2px 3px #0099E0;\n}\n\n.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {\n  -webkit-box-shadow: 0px 0px 5px 5px #0099E0;\n  -moz-box-shadow: 0px 0px 5px 5px #0099E0;\n  box-shadow: 0px 0px 5px 5px #0099E0;\n}\n", ""]);
+	exports.push([module.id, ".featuretta {\n  background: #333;\n  padding:30px;\n  margin: 0;\n}\n\n.featuretta h1 {\n  color:#fff;\n  margin: 0;\n}", ""]);
 	
 	// exports
 
 
 /***/ }),
-/* 193 */
+/* 189 */
 /***/ (function(module, exports) {
 
 	/*
@@ -22920,7 +22232,7 @@
 
 
 /***/ }),
-/* 194 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -23172,16 +22484,16 @@
 
 
 /***/ }),
-/* 195 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(196);
+	var content = __webpack_require__(192);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(194)(content, {});
+	var update = __webpack_require__(190)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -23198,15 +22510,15 @@
 	}
 
 /***/ }),
-/* 196 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(193)();
+	exports = module.exports = __webpack_require__(189)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "/* These are example-specific */\n\n.react-toggle {\n  margin-right: 8px;\n  vertical-align: middle;\n}\n\nlabel,\n.label-text {\n  vertical-align: middle;\n  font-weight: normal;\n  margin-bottom: 0; /* override bootstrap */\n}\n\n.example {\n  margin-top: 36px;\n  margin-bottom: 36px;\n}\n\npre {\n  margin-top: 8px;\n}\n\n.custom-classname.react-toggle--checked .react-toggle-track {\n  background-color: #ab199f;\n}\n", ""]);
+	exports.push([module.id, "/* These are example-specific */\n\n.example {\n  margin-top: 36px;\n  margin-bottom: 36px;\n}\n\npre {\n  margin-top: 8px;\n}\n\n.custom-classname.react-toggle--checked .react-toggle-track {\n  background-color: #ab199f;\n}\n", ""]);
 	
 	// exports
 
