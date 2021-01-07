@@ -1,6 +1,6 @@
 {
   "name": "react-featuretta",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "An elegant, accessible featuretta component for React.",
   "main": "dist/component/index.js",
   "style": "src/style.css",
